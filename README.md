@@ -23,6 +23,7 @@ This requires the following python packages: spacy, scispacy (en_core_sci_lg, v0
 ## Litcovid
 
 `python3 splitXMLintoChunks.py litcovid2pubtator.xml xmls_litcovid_chunk/litcovid2_chunks`
+
 `python3 extract_sentences3.py INT 32 xmls_litcovid_chunk/ &> nohup_extract_litcovid2`
 
 ## Pubtator
@@ -47,13 +48,16 @@ We can now convert the viral_terms.obo into a synonym list
 and finally text mine all extracted sentences for the viral terms:
 
 `mkdir -p results.litcovid.raw/viral_terms/`
+
 `bash runSyngrep.sh "./results.litcovid.raw/viral_terms/" ./xmls_litcovid_chunk/ "" ./mirna_cooc/viral_terms_v1.syn`
 
 
 ## Perform co-occurrence search in mirna_cooc folder for litcovid
 
 `python3 mirna_cooc/getMIRNA_Coocs.py --sent xmls_litcovid_chunk/ --obo mirna_cooc/viral_terms_v1.obo --results results.litcovid.raw/viral_terms > mirna_cooc/identified_sentences_litcovid22`
+
 `cut -f 1 -d' ' mirna_cooc/identified_sentences_litcovid22 | sort | uniq | grep -i "" > mirna_cooc/identified_sentences_litcovid22_sentid`
+
 `grep -f mirna_cooc/identified_sentences_litcovid22_sentid xmls_litcovid_chunk/*.sent > mirna_cooc/rel_sentences_litcovid22`
 
 
@@ -62,6 +66,7 @@ and finally text mine all extracted sentences for the viral terms:
 The benefit of open access papers is, that all data (abstract, full text and )
 
 `python3 mirna_cooc/download_europepmc_xmls.py mirna_cooc/identified_sentences_litcovid22 mirna_cooc/litcovid_xmls`
+
 `python3 mirna_cooc/XMLtoSupplFiles.py mirna_cooc/litcovid_xmls mirna_cooc/litcovid_supplements/`
 
 
@@ -73,6 +78,7 @@ After reading through literature, identify literature through miRNA names
 `python3 miRExplore/python/synonymes/diseaseobo2syn.py mirna_cooc/viral_terms_v2.obo mirna_cooc/viral_terms_v2.syn`
 
 `mkdir -p results.litcovid.raw/viral_terms2/`
+
 `bash runSyngrep.sh "./results.litcovid.raw/viral_terms2/" ./xmls_litcovid_chunk/ "" ./mirna_cooc/viral_terms_v2.syn`
 
 `python3 mirna_cooc/getMIRNA_names.py --sent xmls_litcovid_chunk/ --obo mirna_cooc/viral_terms_v2.obo --results results.litcovid.raw/viral_terms2/ > mirna_cooc/identified_sentences_names_litcovid22`
