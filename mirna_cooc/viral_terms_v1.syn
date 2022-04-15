@@ -1,0 +1,3 @@
+MIR_STATE:MIR_STATE|predicted|putative|potential|in-silico|computed
+MIR_STATE_VIR:MIR_STATE_VIR|viral|SC2V|SARS-CoV-2-encoded|COV2|virus-encoded|sars
+MIR_FORM:MIR_FORM|miR|mature miRNA|mature Transcript|vmiRNA|mature micro-RNA|pre-miR|miRNA|mature miR

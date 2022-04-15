@@ -1,0 +1,47 @@
+[Term]
+id: MIR_STATE
+name: MIR_STATE
+synonym: "in-silico" EXACT []
+synonym: "putative" EXACT []
+synonym: "predicted" EXACT []
+synonym: "potential" EXACT []
+synonym: "computed" EXACT []
+
+[Term]
+id: MIR_STATE_VIR
+name: MIR_STATE_VIR
+synonym: "virus-encoded" EXACT []
+synonym: "SARS-CoV-2-encoded" EXACT []
+synonym: "sars" EXACT []
+synonym: "SC2V" EXACT []
+synonym: "COV2" EXACT []
+synonym: "viral" EXACT []
+
+[Term]
+id: MIR_FORM
+name: MIR_FORM
+synonym: "mature miRNA" EXACT []
+synonym: "mature Transcript" EXACT []
+synonym: "mature miR" EXACT []
+synonym: "mature micro-RNA" EXACT []
+synonym: "miRNA" EXACT []
+synonym: "vmiRNA" EXACT []
+synonym: "miR" EXACT []
+synonym: "pre-miR" EXACT []
+
+[Term]
+id: MIR_NAME
+name: MIR_NAME
+synonym: "SARS-CoV-2-miR" EXACT []
+synonym: "SARS-CoV-2-pre-miR" EXACT []
+synonym: "COV2_" EXACT []
+synonym: "COV2_MD" EXACT []
+synonym: "COV2_MR" EXACT []
+synonym: "SARS-CoV-2-MD" EXACT []
+synonym: "SC2V-mir-M" EXACT []
+synonym: "SC2V-mir-ORF" EXACT []
+synonym: "sars-mir" EXACT []
+synonym: "MD19" EXACT []
+synonym: "MD220" EXACT []
+synonym: "MD297" EXACT []
+synonym: "SCoV-2-miR" EXACT []

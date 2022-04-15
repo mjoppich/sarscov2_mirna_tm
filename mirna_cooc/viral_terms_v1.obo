@@ -1,0 +1,30 @@
+[Term]
+id: MIR_STATE
+name: MIR_STATE
+synonym: "in-silico" EXACT []
+synonym: "putative" EXACT []
+synonym: "predicted" EXACT []
+synonym: "potential" EXACT []
+synonym: "computed" EXACT []
+
+[Term]
+id: MIR_STATE_VIR
+name: MIR_STATE_VIR
+synonym: "virus-encoded" EXACT []
+synonym: "SARS-CoV-2-encoded" EXACT []
+synonym: "sars" EXACT []
+synonym: "SC2V" EXACT []
+synonym: "COV2" EXACT []
+synonym: "viral" EXACT []
+
+[Term]
+id: MIR_FORM
+name: MIR_FORM
+synonym: "mature miRNA" EXACT []
+synonym: "mature Transcript" EXACT []
+synonym: "mature miR" EXACT []
+synonym: "mature micro-RNA" EXACT []
+synonym: "miRNA" EXACT []
+synonym: "vmiRNA" EXACT []
+synonym: "miR" EXACT []
+synonym: "pre-miR" EXACT []
